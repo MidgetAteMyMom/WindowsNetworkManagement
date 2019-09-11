@@ -46,6 +46,8 @@ namespace WindowsNetworkManagement
         // Sets static nameservers for the given network interface
         static public void SetStaticNameservers(NetworkInterface nic, List<string> newNameservers)
         {
+            // Set nameservers to dynamic first, because windows will not delete a old secondary dns if the current profile only contains a primary one
+            SetNameserversToDynamic(nic);
             ManagementObject MO = GetNicManagementObject(nic);
             ManagementBaseObject newDNS = MO.GetMethodParameters("SetDNSServerSearchOrder");
             string[] nameservers = new string[newNameservers.Count];
