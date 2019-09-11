@@ -26,7 +26,7 @@ foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces()) {
 // Validate Inputs
 bool validConfiguration = true;
 foreach (string nameserver in nameservers) {
-    if (!ValidateAddress(nameserver)) {
+    if (!IPv4Validator.ValidateAddress(nameserver)) {
         validConfiguration = false;
     }
 }
