@@ -8,6 +8,11 @@
 
 ## Example
 ```C#
+// Dependencies
+using System;
+using System.Collections.Generic;
+using System.Net.NetworkInformation;
+
 string networkInterfaceName = "Ethernet";
 string ipAddress = "192.168.1.1";
 string subnetMask = "255.255.255.0";
