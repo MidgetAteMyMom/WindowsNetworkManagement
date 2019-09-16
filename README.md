@@ -1,5 +1,5 @@
 # WindowsNetworkManagement
- C# Static class to change network settings under windows 10
+ C# Static class to change network settings under Windows 10
 
 ## Contents
  There are two static classes contained in this project. **IPv4Validator** and **NetworkSettingsControler**
